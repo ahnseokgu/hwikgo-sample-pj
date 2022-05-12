@@ -17,10 +17,10 @@ class SecondViewController: UIViewController {
         self.view.backgroundColor = .blue
         
         // 클로저
-//        testClosures()
+        testClosures()
         
         // MVVM 패턴
-        testMVVMPatten()
+//        testMVVMPatten()
     }
     
     func testClosures() {
