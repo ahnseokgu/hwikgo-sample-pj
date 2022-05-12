@@ -22,7 +22,7 @@ class SecondViewController: UIViewController {
         // MVVM 패턴
 //        testMVVMPatten()
         
-        // RxSwift
+        // RxSwift 패턴 사용
     }
     
     func testClosures() {
