@@ -17,6 +17,13 @@ class SecondViewController: UIViewController {
         self.view.backgroundColor = .blue
         
         // 클로저
+//        testClosures()
+        
+        // MVVM 패턴
+        testMVVMPatten()
+    }
+    
+    func testClosures() {
         var mainViewController:ViewController? = ViewController()
 
         mainViewController?.someFunctionWithEscapingClosure(completionHandler: { paramValue in
@@ -35,8 +42,9 @@ class SecondViewController: UIViewController {
         print(addValue)
         
         mainViewController = nil
-        
-        // MVVM 패턴
+    }
+    
+    func testMVVMPatten() {
         let _ = Just(5)
             .sink(receiveValue: { paramValue in
                 print(paramValue)
