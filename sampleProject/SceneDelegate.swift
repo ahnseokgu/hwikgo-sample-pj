@@ -16,15 +16,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-//        guard let _ = (scene as? UIWindowScene) else { return }
+        // Entry 시작
+        guard let _ = (scene as? UIWindowScene) else { return }
         
-        // 코드 메인 화면 변경 : https://velog.io/@leeyoungwoozz/iOS-storyboard-%EA%B0%80-%EC%95%84%EB%8B%8C-%EC%BD%94%EB%93%9C%EB%A1%9C-UI-%EA%B5%AC%ED%98%84%ED%95%98%EA%B8%B0-Navigation-Controller
-        guard let windowScene = (scene as? UIWindowScene) else { return }
-        window = UIWindow(windowScene: windowScene)
-        let mainViewController = SecondViewController()
-
-        window?.rootViewController = mainViewController
-        window?.makeKeyAndVisible()
+        // 코드로 시작 : https://velog.io/@leeyoungwoozz/iOS-storyboard-%EA%B0%80-%EC%95%84%EB%8B%8C-%EC%BD%94%EB%93%9C%EB%A1%9C-UI-%EA%B5%AC%ED%98%84%ED%95%98%EA%B8%B0-Navigation-Controller
+//        guard let windowScene = (scene as? UIWindowScene) else { return }
+//        window = UIWindow(windowScene: windowScene)
+//        let mainViewController = StartViewController()
+//        window?.rootViewController = mainViewController
+//        window?.makeKeyAndVisible()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

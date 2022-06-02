@@ -8,7 +8,7 @@
 import UIKit
 import Combine
 
-class SecondViewController: UIViewController {
+class StartViewController: UIViewController {
     var addValue: Int = 10
     
     override func viewDidLoad() {
@@ -17,36 +17,34 @@ class SecondViewController: UIViewController {
         self.view.backgroundColor = .blue
         
         // 클로저
-        testClosures()
+        callClosures()
         
-        // MVVM 패턴
-//        testMVVMPatten()
-        
-        // RxSwift 패턴 사용
+        // MVVM 패턴 : Combine
+        callCombine()
     }
     
-    func testClosures() {
-        var mainViewController:ViewController? = ViewController()
+    func callClosures() {
+        var closurePractice:ClosurePractice? = ClosurePractice()
 
-        mainViewController?.someFunctionWithEscapingClosure(completionHandler: { paramValue in
+        closurePractice?.someFunctionWithEscapingClosure(completionHandler: { paramValue in
             self.addValue = 100
             return paramValue + self.addValue
         })
         print(addValue)
         
-        mainViewController?.someFunctionWithNonescapingClosure(closure: { paramValue in
+        closurePractice?.someFunctionWithNonescapingClosure(closure: { paramValue in
             addValue = 200
             return paramValue + addValue
         })
         print(addValue)
         
-        mainViewController?.callFunctionWithEscapingClousre()
+        closurePractice?.callFunctionWithEscapingClousre()
         print(addValue)
         
-        mainViewController = nil
+        closurePractice = nil
     }
     
-    func testMVVMPatten() {
+    func callCombine() {
         let _ = Just(5)
             .sink(receiveValue: { paramValue in
                 print(paramValue)
